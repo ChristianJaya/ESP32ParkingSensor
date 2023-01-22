@@ -12,7 +12,7 @@ github.com/ChristianJaya
 #define BLYNK_PRINT Serial
 #define echoPin 15
 #define trigPin 2
-#define buzzerPin 0
+#define buzzerPin 5
 #define ledPin 4
 #include <Wire.h>
 #include <WiFi.h>
@@ -20,7 +20,7 @@ github.com/ChristianJaya
 #include <BlynkSimpleEsp32.h>
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-char auth[] = "XXXXXXXXX";
+char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "XXXXXXXXX";
 char pass[] = "XXXXXXXXX";
 long duration;
@@ -52,7 +52,7 @@ void loop()
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);
-  cm = duration / 60;
+  cm = duration / 58.82;
   
   if(cm < 20) 
   {
