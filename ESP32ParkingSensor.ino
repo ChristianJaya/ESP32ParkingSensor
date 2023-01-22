@@ -60,10 +60,10 @@ void loop()
     buzzer.on(); 
     digitalWrite(buzzerPin, HIGH);
     digitalWrite(ledPin, HIGH); 
-    lcd.setCursor(0,0); 
+    lcd.setCursor(0, 0); 
     lcd.print(cm); 
     lcd.print(" CM");
-    lcd.setCursor(0,1);
+    lcd.setCursor(0, 1);
     lcd.print("WATCHOUT!");
     Blynk.virtualWrite(V3, cm);
     Blynk.virtualWrite(V4, "WATCHOUT!");
@@ -76,10 +76,10 @@ void loop()
     buzzer.off(); 
     digitalWrite(buzzerPin, LOW);
     digitalWrite(ledPin, LOW); 
-    lcd.setCursor(0,0); 
+    lcd.setCursor(0, 0); 
     lcd.print(cm); 
     lcd.print(" CM"); 
-    lcd.setCursor(0,1);
+    lcd.setCursor(0, 1);
     lcd.print("SAFE!");
     Blynk.virtualWrite(V3, cm);
     Blynk.virtualWrite(V4, "SAFE!");
